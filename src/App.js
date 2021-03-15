@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {Provider} from 'react-redux'
+import getStore from './redux/store';
+import NavBarContainer from './components/Header/components/Navbar';
 function App() {
   return (
-    <h1>Hello word</h1>
+    <Provider store={getStore}>
+    <NavBarContainer></NavBarContainer>
+    </Provider>
   );
 }
 

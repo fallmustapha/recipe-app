@@ -1,9 +1,6 @@
 
-export const MENU_BUTTON_CLICKED='MENU_BUTTON_CLICKED';
+export const FETCH_NAV_LINKS= "FETCH_NAV_LINKS";
 
-export const menuButtonClicked=(id)=>{
-    return {
-        type:MENU_BUTTON_CLICKED,
-        pageId: id
-    }
+export const fetchNavLinks={
+    "type":FETCH_NAV_LINKS
 }
