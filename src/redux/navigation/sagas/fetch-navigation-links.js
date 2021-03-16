@@ -1,9 +1,10 @@
-import {call} from 'redux-saga/effects'
+import {call,put} from 'redux-saga/effects'
+import { fetchNavLinksSuccess } from '../../actions';
 
 const getMockLinks=[
     {
-        label:"Link1",
-        uri:"link1"
+        label:"Recipes",
+        uri:"/"
     },
     {
         label:"Link2",
@@ -12,5 +13,7 @@ const getMockLinks=[
 ];
 
 export default function* fetchNavigationLinks() {
-    return yield getMockLinks;
+    const data=getMockLinks;
+
+    yield put(fetchNavLinksSuccess(data)) ;
 }

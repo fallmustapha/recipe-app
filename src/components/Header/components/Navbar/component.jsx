@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 const Navbar=({brand,links,})=>{
     const classes = useStyles();
     return (
-    <AppBar position="absolute" className={classes.primaryColor}>
+    <AppBar position="relative" className={classes.primaryColor}>
         <Toolbar>
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                     <MenuIcon />

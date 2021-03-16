@@ -1,7 +1,7 @@
 
 
-const recipesReducer=(state={},{action,payload})=>{
-    switch(action){
+const recipesReducer=(state={},{type,payload})=>{
+    switch(type){
         default: return state;
     }
 }

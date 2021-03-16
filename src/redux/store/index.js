@@ -29,10 +29,9 @@ const enhancerCompose = composeWithDevTools();
 const rootEnhancer = enhancerCompose(sagaMiddleware);
 
 
-const getStore=
-(initialState={})=>{
+const getStore=(initialState={})=>{
     const store= createStore(
-        navReducer, initialState,rootEnhancer
+        navReducer, initialState,composeWithDevTools(applyMiddleware(sagaMiddleware))
     );
     sagaMiddleware.run(navigationSagas);
     return store;
